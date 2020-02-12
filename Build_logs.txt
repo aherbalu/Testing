@@ -1,0 +1,163 @@
+baher@inbalx840bs001:~/test_git$ make clobber
+12:54:53 Entire build directory removed.
+
+#### build completed successfully (1 seconds) ####
+
+baher@inbalx840bs001:~/test_git$ source build/envsetup.sh
+including device/generic/car/vendorsetup.sh
+including device/generic/mini-emulator-arm64/vendorsetup.sh
+including device/generic/mini-emulator-armv7-a-neon/vendorsetup.sh
+including device/generic/mini-emulator-mips64/vendorsetup.sh
+including device/generic/mini-emulator-mips/vendorsetup.sh
+including device/generic/mini-emulator-x86_64/vendorsetup.sh
+including device/generic/mini-emulator-x86/vendorsetup.sh
+including device/generic/uml/vendorsetup.sh
+including device/google/cuttlefish/vendorsetup.sh
+including device/google/marlin/vendorsetup.sh
+including device/google/muskie/vendorsetup.sh
+including device/google/taimen/vendorsetup.sh
+including device/linaro/hikey/vendorsetup.sh
+including sdk/bash_completion/adb.bash
+baher@inbalx840bs001:~/test_git$ lunch
+
+You're building on Linux
+
+Lunch menu... pick a combo:
+     1. aosp_arm-eng
+     2. aosp_arm64-eng
+     3. aosp_mips-eng
+     4. aosp_mips64-eng
+     5. aosp_x86-eng
+     6. aosp_x86_64-eng
+     7. aosp_car_arm-userdebug
+     8. aosp_car_arm64-userdebug
+     9. aosp_car_x86-userdebug
+     10. aosp_car_x86_64-userdebug
+     11. mini_emulator_arm64-userdebug
+     12. m_e_arm-userdebug
+     13. m_e_mips64-eng
+     14. m_e_mips-userdebug
+     15. mini_emulator_x86_64-userdebug
+     16. mini_emulator_x86-userdebug
+     17. uml-userdebug
+     18. aosp_cf_x86_auto-userdebug
+     19. aosp_cf_x86_phone-userdebug
+     20. aosp_cf_x86_tablet-userdebug
+     21. aosp_cf_x86_tablet_3g-userdebug
+     22. aosp_cf_x86_tv-userdebug
+     23. aosp_cf_x86_wear-userdebug
+     24. aosp_cf_x86_64_auto-userdebug
+     25. aosp_cf_x86_64_phone-userdebug
+     26. aosp_cf_x86_64_tablet-userdebug
+     27. aosp_cf_x86_64_tablet_3g-userdebug
+     28. aosp_cf_x86_64_tv-userdebug
+     29. aosp_cf_x86_64_wear-userdebug
+     30. cf_x86_auto-userdebug
+     31. cf_x86_phone-userdebug
+     32. cf_x86_tablet-userdebug
+     33. cf_x86_tablet_3g-userdebug
+     34. cf_x86_tv-userdebug
+     35. cf_x86_wear-userdebug
+     36. cf_x86_64_auto-userdebug
+     37. cf_x86_64_phone-userdebug
+     38. cf_x86_64_tablet-userdebug
+     39. cf_x86_64_tablet_3g-userdebug
+     40. cf_x86_64_tv-userdebug
+     41. cf_x86_64_wear-userdebug
+     42. aosp_marlin-userdebug
+     43. aosp_marlin_svelte-userdebug
+     44. aosp_sailfish-userdebug
+     45. aosp_walleye-userdebug
+     46. aosp_walleye_test-userdebug
+     47. aosp_taimen-userdebug
+     48. hikey-userdebug
+     49. hikey64_only-userdebug
+     50. hikey960-userdebug
+
+Which would you like? [aosp_arm-eng] 42
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=9
+TARGET_PRODUCT=aosp_marlin
+TARGET_BUILD_VARIANT=userdebug
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm64
+TARGET_ARCH_VARIANT=armv8-a
+TARGET_CPU_VARIANT=kryo
+TARGET_2ND_ARCH=arm
+TARGET_2ND_ARCH_VARIANT=armv8-a
+TARGET_2ND_CPU_VARIANT=kryo
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-4.15.0-55-generic-x86_64-Ubuntu-18.04.2-LTS
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+HOST_CROSS_2ND_ARCH=x86_64
+HOST_BUILD_TYPE=release
+BUILD_ID=PI
+OUT_DIR=out
+============================================
+baher@inbalx840bs001:~/test_git$ m
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=9
+TARGET_PRODUCT=aosp_marlin
+TARGET_BUILD_VARIANT=userdebug
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm64
+TARGET_ARCH_VARIANT=armv8-a
+TARGET_CPU_VARIANT=kryo
+TARGET_2ND_ARCH=arm
+TARGET_2ND_ARCH_VARIANT=armv8-a
+TARGET_2ND_CPU_VARIANT=kryo
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-4.15.0-55-generic-x86_64-Ubuntu-18.04.2-LTS
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+HOST_CROSS_2ND_ARCH=x86_64
+HOST_BUILD_TYPE=release
+BUILD_ID=PI
+OUT_DIR=out
+============================================
+[1/1] out/soong/.minibootstrap/minibp out/soong/.bootstrap/build.ninja
+[55/56] glob prebuilts/ndk/stl.bp
+[77/77] out/soong/.bootstrap/bin/soong_build out/soong/build.ninja
+FAILED: out/soong/build.ninja
+out/soong/.bootstrap/bin/soong_build -t -l out/.module_paths/Android.bp.list -b out/soong -n out -d out/soong/build.ninja.d -o out/soong/build.ninja Android.bp
+error: external/skia/Android.bp:3:1: module "libskia" already defined
+       external/skqp/Android.bp:3:1 <-- previous definition here
+error: external/strace/dist/Android.bp:7:1: module "sqlite-minimal-defaults" already defined
+       external/sqlite/dist/Android.bp:7:1 <-- previous definition here
+error: external/sqlite/android/Android.bp:1:1: module "libsqlite3_android" already defined
+       external/strace/android/Android.bp:1:1 <-- previous definition here
+error: external/sqlite/android/Android.bp:35:1: module "libsqlite3_phone_number_utils_test" already defined
+       external/strace/android/Android.bp:35:1 <-- previous definition here
+error: external/sqlite/dist/Android.bp:51:1: module "sqlite-defaults" already defined
+       external/strace/dist/Android.bp:51:1 <-- previous definition here
+error: external/skia/Android.bp:918:1: module "skia_pgo" already defined
+       external/skqp/Android.bp:918:1 <-- previous definition here
+error: external/skqp/Android.bp:929:1: module "skia_pgo_no_profile_use" already defined
+       external/skia/Android.bp:929:1 <-- previous definition here
+error: external/strace/dist/Android.bp:66:1: module "libsqlite" already defined
+       external/sqlite/dist/Android.bp:66:1 <-- previous definition here
+error: external/sqlite/dist/Android.bp:123:1: module "sqlite3" already defined
+       external/strace/dist/Android.bp:123:1 <-- previous definition here
+error: external/sqlite/dist/Android.bp:162:1: module "libsqlite_static_minimal" already defined
+       external/strace/dist/Android.bp:162:1 <-- previous definition here
+error: external/skqp/Android.bp:939:1: module "skia_deps" already defined
+       external/skia/Android.bp:939:1 <-- previous definition here
+error: external/skqp/Android.bp:968:1: module "skia_tool_deps" already defined
+       external/skia/Android.bp:968:1 <-- previous definition here
+error: external/skqp/Android.bp:984:1: module "skia_dm" already defined
+       external/skia/Android.bp:984:1 <-- previous definition here
+error: external/skqp/Android.bp:1810:1: module "skia_nanobench" already defined
+       external/skia/Android.bp:1810:1 <-- previous definition here
+ninja: build stopped: subcommand failed.
+12:56:10 soong bootstrap failed with: exit status 1
+
+#### failed to build some targets (37 seconds) ####
+
